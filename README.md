@@ -22,10 +22,6 @@ The default autostart implementation on ARM64 Linux builds (under GNOME/Wayland/
 
 ---
 
-## The Patch Implementation
-
-`vbox_fix.sh` acts as a controlled execution pipeline to bypass the race condition. 
-
 **Execution Flow:**
 1. **Persistence Setup:** Injects a `.desktop` entry into `~/.config/autostart/` to ensure automated execution upon subsequent user logins.
 2. **Process Sanitization:** Identifies and terminates orphaned, hanging, or bugged `VBoxClient` processes blocking system resources.
